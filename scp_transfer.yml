@@ -1,0 +1,8 @@
+---
+- name: Run SCP transfer Python script with Netmiko
+  hosts: switches
+  become: yes
+  tasks:
+    - name: Execute scp_transfer_v1.py using Python3
+      ansible.builtin.shell:
+        cmd: python3 /home/serverlocal/cisco_iosxe/3560Upgrade/scp_transfer_v1.py
